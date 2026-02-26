@@ -11,6 +11,8 @@ make serve
 
 Then open **http://127.0.0.1:8000**. The site uses **live reload**: keep the server running and edit files under `docs/` or `mkdocs.yml` to see changes immediately.
 
+If you see *"plugin is not installed"*, run `uv sync` from the project root and try again.
+
 ## Commands
 
 | Command        | Description |

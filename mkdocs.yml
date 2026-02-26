@@ -13,6 +13,7 @@ strict: true
 nav:
   - Home: index.md
   - Getting started: getting-started.md
+  - Insider features review: insider-features-review.md
   - Showcase:
       - Admonitions: showcase/admonitions.md
       - Content tabs: showcase/tabs.md
