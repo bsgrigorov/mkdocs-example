@@ -1,0 +1,96 @@
+# MkDocs – Material theme (best-practice config)
+# https://squidfunk.github.io/mkdocs-material/
+
+site_name: My Docs
+site_description: Documentation built with MkDocs and Material for MkDocs
+site_url: "" # Set to your production URL when deploying
+
+# Strict mode: fail build on broken links and warnings
+strict: true
+
+# Explicit navigation (recommended; order and labels under your control)
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Showcase:
+      - Admonitions: showcase/admonitions.md
+      - Content tabs: showcase/tabs.md
+      - Code blocks: showcase/code-blocks.md
+      - Lists & blocks: showcase/lists-and-blocks.md
+      - Data & tables: showcase/data-and-tables.md
+
+# Plugins (search; last-updated; minify when MKDOCS_MINIFY=1, e.g. for production build)
+plugins:
+  - search:
+      lang: en
+  - git-revision-date-localized:
+      type: date
+      locale: en
+      enable_creation_date: false
+      strict: false   # INFO instead of WARNING when no git log (avoids abort with mkdocs strict)
+      fallback_to_build_date: true
+  - minify:
+      minify_html: !ENV [MKDOCS_MINIFY, false]
+
+# Markdown extensions (Material + pymdown-extensions)
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+# Material theme (high-contrast text via docs/stylesheets/extra.css)
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - content.tabs.link
+
+# Optional: link to repo (uncomment and set when using Git)
+# repo_url: https://github.com/your-org/your-repo
+# repo_name: your-org/your-repo
+# edit_uri: edit/main/docs/
+
+# High-contrast text (WCAG AA+)
+extra_css:
+  - stylesheets/extra.css
+
+# Optional: footer
+# copyright: Copyright &copy; 2025

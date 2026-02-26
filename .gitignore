@@ -6,3 +6,7 @@ __pycache__/
 vendor/
 dist/
 build/
+
+# MkDocs
+site/
+.cache/
