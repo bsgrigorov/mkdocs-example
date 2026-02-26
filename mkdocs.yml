@@ -3,7 +3,8 @@
 
 site_name: My Docs
 site_description: Documentation built with MkDocs and Material for MkDocs
-site_url: "" # Set to your production URL when deploying
+# Production URL (GitHub Pages: https://<user>.github.io/<repo>/)
+site_url: https://bsgrigorov.github.io/mkdocs-example/
 
 # Strict mode: fail build on broken links and warnings
 strict: true
@@ -83,14 +84,14 @@ theme:
     - content.action.edit
     - content.tabs.link
 
-# Optional: link to repo (uncomment and set when using Git)
-# repo_url: https://github.com/your-org/your-repo
-# repo_name: your-org/your-repo
-# edit_uri: edit/main/docs/
+# Repo link and "Edit this page" (Material content.action.edit)
+repo_url: https://github.com/bsgrigorov/mkdocs-example
+repo_name: bsgrigorov/mkdocs-example
+edit_uri: edit/main/docs/
 
 # High-contrast text (WCAG AA+)
 extra_css:
   - stylesheets/extra.css
 
-# Optional: footer
-# copyright: Copyright &copy; 2025
+# Footer
+copyright: Copyright &copy; 2026
